@@ -1,0 +1,6 @@
+--- OS Inode Inspection for: dataset_sample.csv ---
+Inode Number:     1442965
+File Size:        43 bytes
+Metadata Changed: Tue Sep 29 18:13:06 2026
+Last Modified:    Tue Sep 29 18:13:06 2026
+OS Permissions:   -rw-rw-rw-

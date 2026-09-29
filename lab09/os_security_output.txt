@@ -1,0 +1,7 @@
+Created secret_config.json.
+Locking file permissions to Read-Only (0o400)...
+New Permissions: -r--------
+
+Attempting to overwrite the file...
+>>> [OS KERNEL BLOCKED] PermissionError: [Errno 13] Permission denied: 'secret_config.json'
+>>> The Operating System successfully protected the file!
