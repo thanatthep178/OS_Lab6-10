@@ -1,0 +1,56 @@
+=== AI Cluster OS: 64 GB RAM, 4 GPUs (SIMULATED) ===
+[API] Submitted: Workload_A_LLaMA
+[Workload_A_LLaMA] Waiting for 40 GB RAM...
+[Workload_A_LLaMA] Allocated 40 GB RAM.
+[Workload_A_LLaMA] Running on GPUs [0, 1, 2]
+[API] Submitted: Workload_B_Preproc
+[Workload_B_Preproc] Waiting for 16 GB RAM...
+[Workload_B_Preproc] Allocated 16 GB RAM.
+[Workload_B_Preproc] Running on CPU only!
+
+============================================================
+[DASHBOARD] RAM Available: 8/64 GB
+GPU 0: BUSY (Workload_A_LLaMA) | GPU 1: BUSY (Workload_A_LLaMA) | GPU 2: BUSY (Workload_A_LLaMA) | GPU 3: IDLE
+Queue: 0 | Active jobs (including waiting): 2
+============================================================
+[API] Submitted: Workload_C_Infer
+[Workload_C_Infer] Waiting for 2 GB RAM...
+[Workload_C_Infer] Allocated 2 GB RAM.
+[Workload_C_Infer] Running on GPUs [3]
+
+============================================================
+[DASHBOARD] RAM Available: 6/64 GB
+GPU 0: BUSY (Workload_A_LLaMA) | GPU 1: BUSY (Workload_A_LLaMA) | GPU 2: BUSY (Workload_A_LLaMA) | GPU 3: BUSY (Workload_C_Infer)
+Queue: 0 | Active jobs (including waiting): 3
+============================================================
+[API] Submitted: Workload_D_Hacker[Workload_D_Hacker] FAILED: Dataset not found.
+
+
+============================================================
+[DASHBOARD] RAM Available: 6/64 GB
+GPU 0: BUSY (Workload_A_LLaMA) | GPU 1: BUSY (Workload_A_LLaMA) | GPU 2: BUSY (Workload_A_LLaMA) | GPU 3: BUSY (Workload_C_Infer)
+Queue: 0 | Active jobs (including waiting): 3
+============================================================
+[Workload_C_Infer] Finished successfully.
+
+============================================================
+[DASHBOARD] RAM Available: 8/64 GB
+GPU 0: BUSY (Workload_A_LLaMA) | GPU 1: BUSY (Workload_A_LLaMA) | GPU 2: BUSY (Workload_A_LLaMA) | GPU 3: IDLE
+Queue: 0 | Active jobs (including waiting): 2
+============================================================
+[Workload_B_Preproc] Finished successfully.
+
+============================================================
+[DASHBOARD] RAM Available: 24/64 GB
+GPU 0: BUSY (Workload_A_LLaMA) | GPU 1: BUSY (Workload_A_LLaMA) | GPU 2: BUSY (Workload_A_LLaMA) | GPU 3: IDLE
+Queue: 0 | Active jobs (including waiting): 1
+============================================================
+[Workload_A_LLaMA] Finished successfully.
+
+============================================================
+[DASHBOARD] RAM Available: 64/64 GB
+GPU 0: IDLE | GPU 1: IDLE | GPU 2: IDLE | GPU 3: IDLE
+Queue: 0 | Active jobs (including waiting): 0
+============================================================
+
+=== Cluster OS Shutdown Gracefully ===
