@@ -1,0 +1,20 @@
+--- AI Dataset I/O Benchmark ---
+Small files: 1000
+Bytes per small file: 4096
+Total bytes per test: 4096000
+Setting up test files...
+
+Test 1: Reading 1,000 separate files
+Time: 0.030150 seconds
+Bytes read: 4096000
+
+Test 2: Reading one packed file sequentially
+Time: 0.000692 seconds
+Bytes read: 4096000
+
+--- SUMMARY ---
+Small files time: 0.030150 seconds
+Packed file time: 0.000692 seconds
+Small / Packed time ratio: 43.59x
+Both tests read the same number of bytes.
+Temporary test files cleaned up.

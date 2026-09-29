@@ -1,0 +1,33 @@
+Disk tracks: 0-199
+Initial Head Position: 53
+I/O Requests: [98, 183, 37, 122, 14, 124, 65, 67]
+
+--- FCFS Disk Scheduling ---
+Track  53 ->  98 | Movement: 45
+Track  98 -> 183 | Movement: 85
+Track 183 ->  37 | Movement: 146
+Track  37 -> 122 | Movement: 85
+Track 122 ->  14 | Movement: 108
+Track  14 -> 124 | Movement: 110
+Track 124 ->  65 | Movement: 59
+Track  65 ->  67 | Movement: 2
+Path: 53 -> 98 -> 183 -> 37 -> 122 -> 14 -> 124 -> 65 -> 67
+Total Head Movement: 640 cylinders
+
+--- SCAN Disk Scheduling (UP first) ---
+Track  53 ->  65 | Movement: 12
+Track  65 ->  67 | Movement: 2
+Track  67 ->  98 | Movement: 31
+Track  98 -> 122 | Movement: 24
+Track 122 -> 124 | Movement: 2
+Track 124 -> 183 | Movement: 59
+Track 183 -> 199 | Movement: 16
+Track 199 ->  37 | Movement: 162
+Track  37 ->  14 | Movement: 23
+Path: 53 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183 -> 199 -> 37 -> 14
+Total Head Movement: 331 cylinders
+
+--- SUMMARY ---
+FCFS Total Head Movement: 640 cylinders
+SCAN Total Head Movement: 331 cylinders
+Movement reduction: 48.28%
