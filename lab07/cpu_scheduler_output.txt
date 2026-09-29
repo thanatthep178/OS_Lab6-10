@@ -1,0 +1,32 @@
+All processes arrive at time 0.
+Time unit: simulated CPU time
+Context-switch overhead is not included.
+
+--- FCFS ---
+[Time 00-10] P1
+[Time 10-12] P2
+[Time 12-15] P3
+
+Process | Waiting | Turnaround | Response
+P1      |       0 |         10 |        0
+P2      |      10 |         12 |       10
+P3      |      12 |         15 |       12
+Average Waiting Time: 7.33
+Average Turnaround Time: 12.33
+Average Response Time: 7.33
+
+--- Round Robin (Quantum = 3) ---
+[Time 00-03] P1
+[Time 03-05] P2
+[Time 05-08] P3
+[Time 08-11] P1
+[Time 11-14] P1
+[Time 14-15] P1
+
+Process | Waiting | Turnaround | Response
+P1      |       5 |         15 |        0
+P2      |       3 |          5 |        3
+P3      |       5 |          8 |        5
+Average Waiting Time: 4.33
+Average Turnaround Time: 9.33
+Average Response Time: 2.67

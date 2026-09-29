@@ -1,0 +1,43 @@
+All requests arrive at time 0.
+Each token takes 1 simulated time unit.
+No real AI model or GPU is used.
+
+--- AI Inference: FCFS ---
+[Time 01] User_A_Essay: token 1/10
+[Time 02] User_A_Essay: token 2/10
+[Time 03] User_A_Essay: token 3/10
+[Time 04] User_A_Essay: token 4/10
+[Time 05] User_A_Essay: token 5/10
+[Time 06] User_A_Essay: token 6/10
+[Time 07] User_A_Essay: token 7/10
+[Time 08] User_A_Essay: token 8/10
+[Time 09] User_A_Essay: token 9/10
+[Time 10] User_A_Essay: token 10/10
+  -> User_A_Essay FINISHED
+[Time 11] User_B_Math: token 1/2
+[Time 12] User_B_Math: token 2/2
+  -> User_B_Math FINISHED
+
+User         | TTFT | Completion time
+User_A_Essay |    1 |              10
+User_B_Math  |   11 |              12
+
+--- AI Inference: Round Robin (1 token per turn) ---
+[Time 01] User_A_Essay: token 1/10
+[Time 02] User_B_Math: token 1/2
+[Time 03] User_A_Essay: token 2/10
+[Time 04] User_B_Math: token 2/2
+  -> User_B_Math FINISHED
+[Time 05] User_A_Essay: token 3/10
+[Time 06] User_A_Essay: token 4/10
+[Time 07] User_A_Essay: token 5/10
+[Time 08] User_A_Essay: token 6/10
+[Time 09] User_A_Essay: token 7/10
+[Time 10] User_A_Essay: token 8/10
+[Time 11] User_A_Essay: token 9/10
+[Time 12] User_A_Essay: token 10/10
+  -> User_A_Essay FINISHED
+
+User         | TTFT | Completion time
+User_A_Essay |    1 |              12
+User_B_Math  |    2 |               4
