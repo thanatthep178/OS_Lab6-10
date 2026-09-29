@@ -1,0 +1,12 @@
+--- Simulation: 10,000 Iterations ---
+
+1. Processing in RAM
+Processing time: 0.4556 seconds
+
+2. Processing with repeated file I/O
+Processing time: 1.4354 seconds
+
+--- SUMMARY ---
+RAM time:     0.4556 seconds
+File I/O time: 1.4354 seconds
+File I/O / RAM time ratio: 3.15x

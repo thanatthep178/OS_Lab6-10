@@ -1,0 +1,37 @@
+Reference string: [2, 3, 2, 1, 5, 2, 4, 5, 3, 2, 5, 2]
+Physical frames: 3
+
+--- FIFO (Frames: 3) ---
+Page 2 | FAULT: empty frame     | RAM: [2]
+Page 3 | FAULT: empty frame     | RAM: [2, 3]
+Page 2 | HIT                    | RAM: [2, 3]
+Page 1 | FAULT: empty frame     | RAM: [2, 3, 1]
+Page 5 | FAULT: evicted 2       | RAM: [3, 1, 5]
+Page 2 | FAULT: evicted 3       | RAM: [1, 5, 2]
+Page 4 | FAULT: evicted 1       | RAM: [5, 2, 4]
+Page 5 | HIT                    | RAM: [5, 2, 4]
+Page 3 | FAULT: evicted 5       | RAM: [2, 4, 3]
+Page 2 | HIT                    | RAM: [2, 4, 3]
+Page 5 | FAULT: evicted 2       | RAM: [4, 3, 5]
+Page 2 | FAULT: evicted 4       | RAM: [3, 5, 2]
+Total FIFO Page Faults: 9
+
+--- LRU (Frames: 3) ---
+Page 2 | FAULT: empty frame     | RAM: [2]
+Page 3 | FAULT: empty frame     | RAM: [2, 3]
+Page 2 | HIT                    | RAM: [3, 2]
+Page 1 | FAULT: empty frame     | RAM: [3, 2, 1]
+Page 5 | FAULT: evicted 3       | RAM: [2, 1, 5]
+Page 2 | HIT                    | RAM: [1, 5, 2]
+Page 4 | FAULT: evicted 1       | RAM: [5, 2, 4]
+Page 5 | HIT                    | RAM: [2, 4, 5]
+Page 3 | FAULT: evicted 2       | RAM: [4, 5, 3]
+Page 2 | FAULT: evicted 4       | RAM: [5, 3, 2]
+Page 5 | HIT                    | RAM: [3, 2, 5]
+Page 2 | HIT                    | RAM: [3, 5, 2]
+Total LRU Page Faults: 7
+
+--- SUMMARY ---
+Algorithm | Page Faults | Page Hits
+FIFO      |           9 |         3
+LRU       |           7 |         5
